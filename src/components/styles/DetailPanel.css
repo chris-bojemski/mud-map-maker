@@ -1,0 +1,9 @@
+.detail-panel {
+  background-color: pink;
+
+  height: 100%;
+  width: 20em;
+
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+}

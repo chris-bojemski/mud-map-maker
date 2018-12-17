@@ -1,6 +1,7 @@
 import React from 'react' 
 import Grid from './Grid'
 import GridForm from './GridForm'
+import DetailPanel from './DetailPanel'
 
 class GridBuilder extends React.Component {
   constructor(props) {
@@ -34,6 +35,9 @@ class GridBuilder extends React.Component {
           gridCols={this.state.gridCols}
           changeRows={this.changeRows}
           changeCols={this.changeCols}
+        />
+        <DetailPanel 
+          clicked={this.state.clicked}
         />
         <Grid 
           gridRows={this.state.gridRows}
