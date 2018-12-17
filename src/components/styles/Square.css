@@ -1,0 +1,11 @@
+.square {
+  height: 100px;
+  width: 100px;
+
+  background-color: white;
+
+  border: 1px dashed #8c8c8c;
+
+  margin-left: -1px;
+  margin-top: -1px;
+}
