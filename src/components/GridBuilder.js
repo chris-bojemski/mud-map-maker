@@ -7,7 +7,8 @@ class GridBuilder extends React.Component {
     super(props) 
     this.state = {
       gridRows: 2,
-      gridCols: 2
+      gridCols: 2,
+      clicked: ''
     }
   }
 
@@ -17,6 +18,12 @@ class GridBuilder extends React.Component {
 
   changeCols = gridCols => {
     this.setState({ gridCols })
+  }
+
+  setClicked = squareID => {
+    this.setState({ 
+      clicked: squareID
+    })
   }
 
   render() {
@@ -31,6 +38,8 @@ class GridBuilder extends React.Component {
         <Grid 
           gridRows={this.state.gridRows}
           gridCols={this.state.gridCols}
+          clicked={this.state.clicked}
+          setClicked={this.setClicked}
         />
       </div>
     )

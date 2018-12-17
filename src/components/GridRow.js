@@ -7,7 +7,15 @@ class GridRow extends React.Component {
   makeSquares = numberOfSquares => {
     const squares = []
     for (let i = 0; i < numberOfSquares; i++) {
-      squares.push( <Square /> )
+      squares.push( 
+        <Square 
+          key={`row-${this.props.rowNum}-col-${i}`} 
+          rowNum={this.props.rowNum}
+          colNum={i}
+          clicked={this.props.clicked}
+          setClicked={this.props.setClicked}
+        /> 
+      )
     }
     return squares
   }

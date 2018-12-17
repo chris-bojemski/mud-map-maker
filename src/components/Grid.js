@@ -7,7 +7,14 @@ class Grid extends React.Component {
   createGrid = (rows, cols) => {
     const gridRows = []
     for (let i = 0; i < rows; i++) {
-      gridRows.push( <GridRow numberOfCols={cols} /> )
+      gridRows.push( 
+        <GridRow 
+          rowNum={i} 
+          numberOfCols={cols} 
+          clicked={this.props.clicked}
+          setClicked={this.props.setClicked}
+        /> 
+      )
     }
     return gridRows
   }
