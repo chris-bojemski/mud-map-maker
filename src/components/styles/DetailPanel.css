@@ -9,3 +9,8 @@
   position: fixed;
   z-index: 1;
 }
+
+.detail-panel .detail-description {
+  width: 90%;
+  height: 5em;
+}
