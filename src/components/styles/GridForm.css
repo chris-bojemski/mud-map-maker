@@ -4,4 +4,13 @@
 
   background-color: #d3d3d3;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  text-align: center;
+}
+
+.grid-form-container input {
+  margin-right: 8em;
 }

@@ -9,7 +9,8 @@ class GridBuilder extends React.Component {
     this.state = {
       gridRows: 2,
       gridCols: 2,
-      clicked: ''
+      clicked: '',
+      clickedDescription: ''
     }
   }
 
@@ -21,9 +22,15 @@ class GridBuilder extends React.Component {
     this.setState({ gridCols })
   }
 
-  setClicked = squareID => {
+  setClicked = squareId => {
     this.setState({ 
-      clicked: squareID
+      clicked: squareId
+    })
+  }
+
+  deselectRoom = () => {
+    this.setState({ clicked: '' }, () => {
+      console.log("Deselected.")
     })
   }
 
@@ -35,9 +42,11 @@ class GridBuilder extends React.Component {
           gridCols={this.state.gridCols}
           changeRows={this.changeRows}
           changeCols={this.changeCols}
+          deselectRoom={this.deselectRoom}
         />
         <DetailPanel 
           clicked={this.state.clicked}
+          clickedDescription={this.state.clickedDescription}
         />
         <Grid 
           gridRows={this.state.gridRows}

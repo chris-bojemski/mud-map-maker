@@ -4,6 +4,8 @@
   height: 100%;
   width: 20em;
 
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
+  top: 4em;
+  left: 0;
+  position: fixed;
+  z-index: 1;
 }

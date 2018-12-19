@@ -14,11 +14,16 @@ class GridForm extends React.Component {
     this.setState({ locked: !this.state.locked })
   }
 
+  handleDeselect = event => {
+    event.preventDefault()
+    this.props.deselectRoom()
+  }
+
   render() {
     return (
       <div className="grid-form-container">
         <form>
-          <label for="gridRows">Rows: </label>
+          <label htmlFor="gridRows">Rows: </label>
           <input 
             disabled={this.state.locked}
             type="number" 
@@ -28,7 +33,7 @@ class GridForm extends React.Component {
             onChange={(event) => this.props.changeRows(event.target.value)}
           />
 
-          <label for="gridCols">Cols: </label>
+          <label htmlFor="gridCols">Cols: </label>
           <input 
             disabled={this.state.locked}
             type="number" 
@@ -38,11 +43,18 @@ class GridForm extends React.Component {
             onChange={(event) => this.props.changeCols(event.target.value)}
           />
 
-          <label for="lock">Lock?</label>
+          <label htmlFor="lock">Lock</label>
           <input 
             type="checkbox"
             onChange={this.toggleLock}
+            name="lock"
           />
+
+          <button
+            onClick={(event) => this.handleDeselect(event)}
+          >
+            Deselect Room
+          </button>
         </form>
       </div>
     )
