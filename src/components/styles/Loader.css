@@ -1,0 +1,19 @@
+.centering-container {
+  
+  display: flex;
+  height: 90vh;
+}
+
+.loader-form-container {
+  display: inline-block;
+  margin: auto;
+  width: 35%;
+
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.loader-form-container form {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}

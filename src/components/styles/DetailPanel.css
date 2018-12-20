@@ -14,3 +14,16 @@
   width: 90%;
   height: 5em;
 }
+
+.warning-banner {
+  padding: 1em 0 1em 1em;
+  background-color: red;
+}
+
+.warning-banner p {
+  color: white;
+}
+
+.warning-banner p a {
+  color: white;
+}

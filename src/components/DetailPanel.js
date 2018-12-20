@@ -14,10 +14,25 @@ class DetailPanel extends React.Component {
     this.setState({ description: event.target.value })
   }
 
+  createBanner = () => {
+    if (this.props.noUrlWarning) {
+      return (
+        <div className="warning-banner">
+          <p>There's no URL selected; you're in playground mode, and nothing will save.</p>
+          <p>If you want to save your data, <a href="/">click here.</a></p>
+        </div>
+      )
+    } else {
+      return null
+    }
+  }
+
   getDetailsFromProps = () => {
+    const banner = this.createBanner()
     if (this.props.clicked) {
       return (
         <>
+          {banner}
           <h3>{this.props.clicked}</h3>
           <label htmlFor="description">
             Description:
@@ -38,7 +53,10 @@ class DetailPanel extends React.Component {
       )
     } else {
       return (
-        <h3>Nothing selected.</h3>
+        <>
+          {banner}
+          <h3>Nothing selected.</h3>
+        </>
       )
     }
   }

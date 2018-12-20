@@ -52,6 +52,7 @@ class GridBuilder extends React.Component {
           updateGridScale={this.updateGridScale}
         />
         <DetailPanel 
+          noUrlWarning={!this.props.url}
           clicked={this.state.clicked}
           clickedDescription={this.state.clickedDescription}
         />
