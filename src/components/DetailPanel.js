@@ -23,13 +23,12 @@ class DetailPanel extends React.Component {
             Description:
           </label>
           <br></br>
-          <input
+          <textarea
             className="detail-description"
-            type="textarea"
             value={this.state.description}
             onChange={this.changeDescription}
             name="description"
-          ></input>
+          ></textarea>
           <button
             className="detail-save-button"
           >
