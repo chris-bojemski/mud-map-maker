@@ -9,9 +9,14 @@ class GridBuilder extends React.Component {
     this.state = {
       gridRows: 2,
       gridCols: 2,
+      gridScale: 25,
       clicked: '',
-      clickedDescription: ''
+      clickedDescription: '',
     }
+  }
+
+  updateGridScale = gridScale => {
+    this.setState({ gridScale })
   }
 
   changeRows = gridRows => {
@@ -40,9 +45,11 @@ class GridBuilder extends React.Component {
         <GridForm 
           gridRows={this.state.gridRows}
           gridCols={this.state.gridCols}
+          gridScale={this.state.gridScale}
           changeRows={this.changeRows}
           changeCols={this.changeCols}
           deselectRoom={this.deselectRoom}
+          updateGridScale={this.updateGridScale}
         />
         <DetailPanel 
           clicked={this.state.clicked}
@@ -53,6 +60,7 @@ class GridBuilder extends React.Component {
           gridCols={this.state.gridCols}
           clicked={this.state.clicked}
           setClicked={this.setClicked}
+          gridScale={this.state.gridScale}
         />
       </div>
     )

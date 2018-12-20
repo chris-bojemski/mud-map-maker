@@ -6,7 +6,7 @@ class GridForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      locked: false
+      locked: false,
     }
   }
 
@@ -50,10 +50,25 @@ class GridForm extends React.Component {
             name="lock"
           />
 
+          <label 
+            htmlFor="grid-scale"
+          >
+            Zoom ({this.props.gridScale}): 
+          </label>
+          <input 
+            type="range"
+            name="grid-scale"
+            min="25"
+            max="200"
+            defaultValue={this.props.gridScale}
+            onChange={(event) => this.props.updateGridScale(event.target.value)}
+          >
+          </input>
+
           <button
             onClick={(event) => this.handleDeselect(event)}
           >
-            Deselect Room
+            Deselect Room(s)
           </button>
         </form>
       </div>

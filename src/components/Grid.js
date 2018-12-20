@@ -13,6 +13,7 @@ class Grid extends React.Component {
           numberOfCols={cols} 
           clicked={this.props.clicked}
           setClicked={this.props.setClicked}
+          gridScale={this.props.gridScale}
         /> 
       )
     }

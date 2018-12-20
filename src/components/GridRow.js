@@ -14,6 +14,7 @@ class GridRow extends React.Component {
           colNum={i}
           clicked={this.props.clicked}
           setClicked={this.props.setClicked}
+          gridScale={this.props.gridScale}
         /> 
       )
     }
