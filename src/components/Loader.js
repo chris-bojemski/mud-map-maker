@@ -12,13 +12,12 @@ class Loader extends React.Component {
   }
 
   handleSubmit = () => {
-    console.log('hello')
     this.props.updateBaseURL(this.state.url)
   }
 
   handleUrlChange = event => {
     this.setState({ url: event.target.value })
-  } 
+  }
 
   render() {
     return (
@@ -29,7 +28,7 @@ class Loader extends React.Component {
             <p>If you have the MUD Map Maker development server deployed locally, this is likely <a href="http://localhost:4000">http://localhost:4000</a>. <strong>Please exercise caution</strong> when connecting to someone else's MUD Map Maker API.</p>
             <input type="text" onChange={(event) => this.handleUrlChange(event)}></input>
             <br></br>
-            <Link to="/build" onClick={this.handleSubmit}>Submit & Load</Link>
+            <Link to="/menu" onClick={this.handleSubmit}>Submit & Load</Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,16 @@
+.asset-menu-header {
+  margin-left: 1.5em;
+}
+
+.asset-menu-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3em;
+}
+
+.asset-menu {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0em 1em 1em 1em;
+  width: 14em;
+}
